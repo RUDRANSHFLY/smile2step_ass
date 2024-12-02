@@ -2,9 +2,11 @@ from flask import Flask , jsonify
 from schema import create_user_table
 from config import connectDB
 from flask import request
+from flask_cors import CORS
 
 app = Flask(__name__)
 
+CORS(app)
 
 create_user_table()
 
